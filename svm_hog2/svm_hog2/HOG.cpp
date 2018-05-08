@@ -18,7 +18,7 @@ using namespace cv;
 using namespace cv::ml;
 using namespace std;
 
-#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm_2/svm_hog2/svm_hog2/dataset1x1/"
+#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm/svm_hog/svm_hog2/svm_hog2/dataset1x1/"
 
 ///////////////////////////////////HOG+SVM识别方式2///////////////////////////////////////////////////	
 void Train()
@@ -273,7 +273,7 @@ void Detect()
 		imshow("detector", img);
 		string resultPicName = "result/" + to_string(result_count)+".jpg";
 		result_count++;
-		//imwrite(resultPicName, img);//保存结果图片
+		imwrite(resultPicName, img);//保存结果图片
 		int c = waitKey(10) & 255;
 		if (c == 'q' || c == 'Q' || !f)
 			break;
@@ -286,8 +286,8 @@ void Detect()
 void HOG_SVM2()
 {
 	//如果使用05 CVPR提供的默认分类器，则不需要Train(),直接使用Detect检测图片
-	//Train();
-	//cout << "Train done";
+	Train();
+	cout << "Train done";
 	Detect();
 }
 

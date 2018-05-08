@@ -1,9 +1,14 @@
-﻿  detect.cpp
+﻿  HOG.cpp
 f:\0xk\1xk_workspace\opencv3.2\opencv\build\include\opencv2\core\mat.hpp(2586): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 f:\0xk\1xk_workspace\opencv3.2\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 f:\0xk\1xk_workspace\opencv3.2\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 f:\0xk\1xk_workspace\opencv3.2\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 f:\0xk\1xk_workspace\opencv3.2\opencv\build\include\opencv2\imgproc.hpp(592): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-f:\0xk\1xk_workspace\hog_svm\hog_svm_2\svm_hog2\svm_hog2\detect.cpp(30): warning C4101: “_filename”: 未引用的局部变量
-  svm_hog2.vcxproj -> F:\0xk\1xk_workspace\HOG_SVM\hog_svm_2\svm_hog2\x64\Debug\svm_hog2.exe
-  svm_hog2.vcxproj -> F:\0xk\1xk_workspace\HOG_SVM\hog_svm_2\svm_hog2\x64\Debug\svm_hog2.pdb (Full PDB)
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(90): warning C4244: “初始化”: 从“int64”转换到“double”，可能丢失数据
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(92): warning C4244: “初始化”: 从“int64”转换到“double”，可能丢失数据
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(101): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(106): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(134): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+f:\0xk\1xk_workspace\hog_svm\hog_svm\svm_hog\svm_hog2\svm_hog2\hog.cpp(33): warning C4101: “n”: 未引用的局部变量
+  svm_hog2.vcxproj -> F:\0xk\1xk_workspace\HOG_SVM\hog_svm\svm_hog\svm_hog2\x64\Debug\svm_hog2.exe
+  svm_hog2.vcxproj -> F:\0xk\1xk_workspace\HOG_SVM\hog_svm\svm_hog\svm_hog2\x64\Debug\svm_hog2.pdb (Full PDB)
