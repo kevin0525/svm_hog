@@ -19,14 +19,13 @@
 //using namespace cv::ml;
 //using namespace std;
 //
-//#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm_2/svm_hog2/svm_hog2/dataset1x1_备份20180507/"
-//
+//#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm/svm_hog/svm_hog2/svm_hog2/dataset_deck/"
 //// 使用训练好的分类器识别
 //void Detect()
 //{
 //	VideoCapture capture("out.avi");
 //	double rate = capture.get(CV_CAP_PROP_FPS);//获取视频文件的帧率  
-//	VideoWriter writer("out1.avi", CV_FOURCC('M', 'J', 'P', 'G'), rate, Size(480, 270), true);//保存视频的大小要与检测img的大小一致
+//	VideoWriter writer("out1.avi", CV_FOURCC('M', 'J', 'P', 'G'), rate, Size(960, 540), true);//保存视频的大小要与检测img的大小一致
 //	if (!writer.isOpened())
 //	{
 //		printf("write1 error .. \n"); return;
@@ -55,6 +54,7 @@
 //	HOGDescriptor hog(cvSize(64, 64), cvSize(16, 16), cvSize(8, 8), cvSize(8, 8), 9);
 //	hog.setSVMDetector(detector);// 使用自己训练的分类器
 //								 //hog.setSVMDetector(HOGDescriptor::getDefaultPeopleDetector());//可以直接使用05 CVPR已训练好的分类器,这样就不用Train()这个步骤了
+//	//cout << "set HOG done" << endl;
 //
 //	// 检测图片
 //	while (capture.isOpened())
@@ -68,7 +68,7 @@
 //		// (and more false alarms, respectively), decrease the hitThreshold and
 //		// groupThreshold (set groupThreshold to 0 to turn off the grouping completely).
 //		//多尺度检测
-//		resize(img, img, Size(480, 270));
+//		resize(img, img, Size(960, 540));
 //		hog.detectMultiScale(img, found, 0, Size(8, 8), Size(0, 0), 1.05, 2);
 //		t = (double)getTickCount() - t;
 //		//printf("detection time = %gms\n", t*1000. / cv::getTickFrequency());
@@ -116,7 +116,7 @@
 //
 //		imshow("detector", img);
 //		//保存结果视频
-//		//writer << img;
+//		writer << img;
 //
 //		//等待50ms，如果从键盘输入的是q、Q、或者是Esc键，则退出
 //		int key = waitKey(30);

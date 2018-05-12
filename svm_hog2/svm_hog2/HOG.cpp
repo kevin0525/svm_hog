@@ -18,7 +18,7 @@ using namespace cv;
 using namespace cv::ml;
 using namespace std;
 
-#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm/svm_hog/svm_hog2/svm_hog2/dataset1x1/"
+#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm/svm_hog/svm_hog2/svm_hog2/dataset_deck/"
 
 ///////////////////////////////////HOG+SVM识别方式2///////////////////////////////////////////////////	
 void Train()
@@ -79,6 +79,13 @@ void Train()
 		//cout << "processing:" << imagePath[i] << endl;
 
 		// 归一化
+		//判断输入训练图像尺寸是否合适
+		if (src.rows != src.cols) {
+			cout << "ops" << endl;
+			cout << imagePath[i] << endl;
+			continue;
+		}
+
 		resize(src, trainImage, Size(64, 64));
 		//imshow("src", trainImage);
 		//int c = waitKey(0) & 255;
@@ -106,7 +113,7 @@ void Train()
 		classOfSample.at<int>(i, 0) = imageClass[i];
 	}
 
-
+	cout << "Hog Done" << endl;
 	///////////////////////////////////使用SVM分类器训练///////////////////////////////////////////////////	
 	//设置参数，注意Ptr的使用
 	Ptr<SVM> svm = SVM::create();
@@ -231,6 +238,9 @@ void Detect()
 		// (and more false alarms, respectively), decrease the hitThreshold and
 		// groupThreshold (set groupThreshold to 0 to turn off the grouping completely).
 		//多尺度检测
+		//cout << img.rows<<" ";
+		//cout << img.cols << endl;
+
 		resize(img, img, Size(960, 540));
 		//xk20180508  padding ->Size(0,0)
 		hog.detectMultiScale(img, found, 0, Size(8, 8), Size(0, 0), 1.05, 2);
@@ -273,7 +283,7 @@ void Detect()
 		imshow("detector", img);
 		string resultPicName = "result/" + to_string(result_count)+".jpg";
 		result_count++;
-		imwrite(resultPicName, img);//保存结果图片
+		//imwrite(resultPicName, img);//保存结果图片
 		int c = waitKey(10) & 255;
 		if (c == 'q' || c == 'Q' || !f)
 			break;
@@ -286,8 +296,8 @@ void Detect()
 void HOG_SVM2()
 {
 	//如果使用05 CVPR提供的默认分类器，则不需要Train(),直接使用Detect检测图片
-	Train();
-	cout << "Train done";
+	//Train();
+	//cout << "Train done";
 	Detect();
 }
 
