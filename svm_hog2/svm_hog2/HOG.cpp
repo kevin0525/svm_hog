@@ -18,7 +18,7 @@ using namespace cv;
 using namespace cv::ml;
 using namespace std;
 
-#define FILEPATH  "F://0xk/1xk_workspace/HOG_SVM/hog_svm/svm_hog/svm_hog2/svm_hog2/dataset_deck/"
+#define FILEPATH  "F://000workspace/github_workspace/svm_hog/svm_hog/svm_hog2/svm_hog2/dataset_deck/"
 
 ///////////////////////////////////HOG+SVM识别方式2///////////////////////////////////////////////////	
 void Train()
@@ -275,7 +275,7 @@ void Detect()
 				partImg_count++;
 				//namedWindow(partImgName, 1);
 				partImg = img(r);
-				imwrite(partImgName, partImg);
+				//imwrite(partImgName, partImg);
 			}
 			rectangle(img, r.tl(), r.br(), cv::Scalar(0, 255, 0), 3);
 		}
