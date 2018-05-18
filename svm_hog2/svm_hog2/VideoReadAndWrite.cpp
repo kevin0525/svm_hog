@@ -19,7 +19,7 @@
 //
 //int main() {
 //
-//	VideoCapture capture("a.mp4");
+//	VideoCapture capture("F://000workspace/a.mp4");
 //	double rate = capture.get(CV_CAP_PROP_FPS);//获取视频文件的帧率  
 //	cout << rate << endl;
 //	VideoWriter writer1("out.avi", CV_FOURCC('M', 'J', 'P', 'G'), rate, Size(960, 540),true);
@@ -28,8 +28,8 @@
 //		printf("write1 error .. \n"); return false;
 //	}
 //	Mat frame;
-//	int begin = round(20 * rate);//截取片段的开始时间
-//	int end = round(40 * rate);//截取时间的终止时间
+//	int begin = round(25 * rate);//截取片段的开始时间
+//	int end = round(30 * rate);//截取时间的终止时间
 //	int count = 0;//截取帧数
 //	//cout << time << endl;
 //	while (capture.isOpened()) {
